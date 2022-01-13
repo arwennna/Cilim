@@ -1,0 +1,106 @@
+h1 {
+	text-align: center !important;
+	margin: auto;
+	width: 100%;
+}
+
+html {
+  min-height: 100%;
+}
+
+/*Slika je preuzeta sa https://www.dukes-auctions.com/department/rugs-textiles*/
+
+body {
+  background: url(cilim.png); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  min-height: 100%;
+  text-align: justify;
+}
+
+dl {
+  text-align: left;
+}
+
+#igrica {
+  background: url(cilim2.png);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  min-height: 100%;
+}
+
+.glavni {
+	margin-top: 50px;
+	width: 60%;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.dugme {
+	background-color: #661111;
+	color: white;
+}
+
+#prviIgrac {
+  font-weight: bold;
+}
+
+#prviIgrac dt{
+	font-size: 40px;
+}
+
+#prviIgrac dd{
+	font-size: 30px;
+
+}
+
+#drugiIgrac {
+  font-weight: bold;
+}
+
+#drugiIgrac dt{
+	font-size: 40px;
+}
+
+#drugiIgrac dd{
+	font-size: 30px;
+}
+
+/*Navbar preuzet sa w3schools*/
+
+.navbar {
+  border-radius: 5px;
+  width: 100%;
+  background-color: #899c89;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+  text-align: center; 
+}
+
+.navbar a:hover {
+  border-radius: 5px;
+  background-color: #487f7d;
+}
+
+.navbar a.active {
+  background-color: #487f7d;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; 
+  }
+}
+
+/*Kraj navbara*/
