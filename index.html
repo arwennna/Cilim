@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ćilim</title>
+
+	<meta charset="utf-8">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="icon" href="icon.jpg">
+
+</head>
+<body>
+
+	<div class="container glavni">
+		<div class="row p-3">
+			<h1> Ćilim </h1>
+		</div>
+
+		<div class="row p-3">
+			<div class="navbar" id="izbornik">
+			  <a href="#" id="novaIgraMeni" onclick="prikazi('novaIgra')">Nova igra</a>
+			  <a href="#" id="upute" onclick="prikazi('upute')">Upute</a>
+			  <a href="#" id="about" onclick="prikazi('about')">O projektu</a>
+			</div>
+		</div>
+
+		<div class="row p-3" id="novaIgraSadrzaj" style="display: none">
+			<form action="game.html">
+			  <div class="form-group row">
+			    <label for="igrac1" class="col-sm-2 col-form-label">Ime:</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="igrac1" value="Igrač 1">
+			    </div>
+			  </div>
+
+			  <div class="form-group row">
+			    <label for="igrac2" class="col-sm-2 col-form-label">Ime:</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="igrac2" value="Igrač 2">
+			    </div>
+			  </div>
+
+			  <fieldset class="form-group">
+			    <div class="row">
+			      <legend class="col-form-label col-sm-2 pt-0">Dimenzije ploče:</legend>
+			      <div class="col-sm-10">
+			        <div class="form-check">
+			          <input class="form-check-input" type="radio" name="opcije" id="opcija1" value="7" checked>
+			          <label class="form-check-label" for="opcija1">
+			            7
+			          </label>
+			        </div>
+			        <div class="form-check">
+			          <input class="form-check-input" type="radio" name="opcije" id="opcija2" value="11">
+			          <label class="form-check-label" for="opcija2">
+			            11
+			          </label>
+			        </div>
+			        <div class="form-check">
+			          <input class="form-check-input" type="radio" name="opcije" id="opcija3" value="13">
+			          <label class="form-check-label" for="opcija3">
+			            13
+			          </label>
+			        </div>
+			      </div>
+			    </div>
+			  </fieldset>
+			  <div class="form-group row">
+			    <div class="col-sm-10">
+			    	<button type="submit" class="btn dugme" onclick="pokupiPodatke()">Započni igricu!</button>	      
+			    </div>
+			  </div>
+			</form>
+
+		</div>
+
+		<div class="row p-3" id="uputeSadrzaj" style="display: none">
+			<p> Na početku igre, četiri ugaona polja označena su tako da su oba igrača dobila po dva polja. Prvom igraču je dodijeljena bordo boja, a drugom plava. Igra se sastoji od kvadratića poredanih u obliku “baklave”. Okvir je označen crnom bojom, te se igra odvija unutar baklave (ćilima). Dva igrača igraju naizmjenično. Svaki igrač u svom potezu bira jednu neoznačenu stranu jednog kvadratića (siva linija unutar ćilima). Igrač označava stranu kvadratića klikom na baklavu. Označava se najbliža stranica kvadratića ukoliko je ona slobodna. Ukoliko nije, korisnik treba kliknuti drugi put. Ukoliko igrač označi posljednju neoznačenu stranu kvadratića,​ zatvara ​kvadratić i označava ga svojim poljem. Ovo se može desiti samo ukoliko su tri strane već bile označene, te se izabere preostala strana. Igrač bira novu neoznačenu stranu sve dok zatvara kvadratiće. Kada izabere stranu kvadratića tako da ne zatvori kvadratić, drugi igrač preuzima potez. Igra se nastavlja sve do momenta kada posljednje polje ne bude označeno. Pobijedio je igrač koji zatvori više kvadratića.</p>
+		</div>
+
+		<div class="container" id="aboutSadrzaj" style="display: none">
+			<div class="row p-3" >
+				<div class="col-lg-4">
+					<h3> Predmet </h3>
+					<dl>
+						<dt> 
+							Naziv predmeta
+						</dt>
+						<dd>
+							Web programiranje
+						</dd>
+
+						<dt>
+							Predmetni profesor
+						</dt>
+						<dd>
+							prof. dr Elmedin Selmanović
+						</dd>
+
+						<dt>
+							Predmetni asistent
+						</dt>
+						<dd>
+							Sead Delalić
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="col-lg-4">
+					<h3> Studij </h3>
+					<dl>
+						<dt>
+							Studijski program
+						</dt>
+						<dd>
+							Teorijska kompjuterska nauka
+						</dd>
+
+						<dt>
+							Odsjek
+						</dt>
+						<dd>
+							Odsjek za matematiku
+						</dd>
+
+						<dt>
+							Fakultet
+						</dt>
+						<dd>
+							Prirodno-matematički fakultet Univerziteta u Sarajevu
+						</dd>
+					</dl>
+				</div>
+
+				<div class="col-lg-4">
+					<h3> Autor </h3>
+					<dl>
+						<dt>
+							Ime i prezime
+						</dt>
+						<dd>
+							Sara-Farah Materne
+						</dd>
+						<dt>
+							Kontakt
+						</dt>
+						<dd>
+					      	<i class="fas fa-mobile-alt"></i> +38762102065
+					    </dd>
+					    <dd>
+					    	<i class="fas fa-envelope"></i> sara.farah.materne@gmail.com
+					    </dd>
+					    <dd>
+					    	<i class="fab fa-facebook-square"></i> Sara-Farah Materne
+					    </dd>
+					    <dd>
+					    	<i class="fab fa-linkedin"></i> Sara-Farah Materne
+					    </dd>
+					</dl>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<script src= "pocetni.js" type="text/javascript"></script>
+
+	</div>
+
+</body>
+</html>
