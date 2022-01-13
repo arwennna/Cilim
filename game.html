@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ćilim</title>
+
+	<meta charset="utf-8">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="icon" href="icon.jpg">
+
+
+</head>
+<body id="igrica">
+	<div class="container-fluid">
+		<div class="row p-3">
+			<!--Statistika za "lijevog" igrača-->
+			<div class="col-3" id="prviIgrac">
+				<dl>
+					<dt class="oznakaIgrac">
+						Prvi igrač:
+					</dt>
+					<dd id="ime1">
+					</dd>
+					<dt>
+						Rezultat:
+					</dt>
+					<dd id="rezultat1">
+					</dd>
+				</dl>
+			</div>
+
+			<!--Igraća ploča-->
+			<div class="col-6 ">
+				<div class="row" style="min-height: 50px">
+					<h2 id="winner" style="text-align: center; margin: auto"></h2>
+				</div>
+				<div class="row" id="stats" style="min-height: 50px">
+					<div class="col-6">
+						<button class="btn dugme" style="visibility: hidden; float: right" id="revans" onclick="start()" >Revanš</button>
+					</div>
+					<div class="col-6">
+						<a href="index.html"><button class="btn dugme" style="visibility: hidden; float: left" id="pocetna">Početna</button></a>
+					</div>
+				</div>
+				<div class="row" id="kolonaPloca">
+					<canvas id = "ploca"></canvas>
+				</div>
+			</div>
+
+			<script type="text/javascript" src="igrica.js">
+
+			</script>
+
+
+			<!--Statistika za "desnog" igrača-->
+			<div class="col-3" id="drugiIgrac">
+				<dl>
+					<dt class="oznakaIgrac">
+						Drugi igrač:
+					</dt>
+					<dd id="ime2">
+					</dd>
+					<dt>
+						Rezultat:
+					</dt>
+					<dd id="rezultat2">
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
